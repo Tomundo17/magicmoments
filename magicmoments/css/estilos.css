@@ -1,0 +1,265 @@
+/* ------------ ESTILOS GENERALES ------------ */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f8f8f8;
+    color: #333;
+  }
+  
+  h1, h2, h3, h4 {
+    margin-top: 0;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  /* ------------ HEADER ------------ */
+  header {
+    background: #4B2768;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+  }
+  
+  header .logo {
+    font-weight: bold;
+    font-size: 20px;
+  }
+  
+  header nav a {
+    color: white;
+    margin-left: 15px;
+  }
+  
+  header nav a.active {
+    text-decoration: underline;
+  }
+  
+  /* ------------ CONTENEDOR ------------ */
+  .contenedor {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 20px;
+  }
+  
+  /* ------------ BOTONES ------------ */
+  .btn {
+    display: inline-block;
+    background: #D4AF37;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+  
+  .btn:hover {
+    opacity: 0.9;
+  }
+  
+  /* ------------ GRID DE CATEGORÍAS ------------ */
+  .categorias-grid {
+    display: flex;
+    gap: 30px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+  .categoria-card {
+    background: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    max-width: 300px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+  
+  .categoria-img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 15px;
+  }
+  
+  /* ------------ GRID DE PLANES ------------ */
+  .planes-grid {
+    display: flex;
+    gap: 30px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+  .plan-card {
+    background: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    max-width: 300px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+  
+  .plan-card ul {
+    text-align: left;
+    padding-left: 20px;
+  }
+  
+  /* ------------ SOBRE NOSOTROS ------------ */
+  .nosotros-contenido {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+  
+  .nosotros-contenido .texto {
+    flex: 1;
+    min-width: 280px;
+  }
+  
+  .foto-nosotros img {
+    max-width: 300px;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+  
+  /* ------------ CONTACTO ------------ */
+  .contacto-container {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+  
+  .contacto-form {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .contacto-form input,
+  .contacto-form textarea {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .contacto-info {
+    flex: 1;
+    min-width: 280px;
+  }
+  
+  /* ------------ FOOTER ------------ */
+  footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+  }
+  /* ----------- EFECTO HOVER TARJETAS ------------ */
+.categoria-card, .plan-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .categoria-card:hover, .plan-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  }
+  
+  /* ----------- EFECTO BOTÓN ------------ */
+  .btn {
+    transition: background 0.3s ease, transform 0.2s ease;
+  }
+  
+  .btn:hover {
+    background: #c49c2f;
+    transform: scale(1.05);
+  }
+  
+  /* ----------- FADE-IN SECCIONES ------------ */
+  section.contenedor {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+  
+  section.contenedor.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* ---------- HERO PRINCIPAL ---------- */
+.hero {
+  background: url('../img/hero.jpg') center/cover no-repeat;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  color: white;
+  text-align: center;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.4); /* capa oscura sobre imagen */
+}
+
+.hero-content {
+  position: relative;
+  max-width: 700px;
+}
+
+.btn-hero {
+  font-size: 1.2em;
+  padding: 15px 30px;
+  margin-top: 20px;
+}
+
+/* ---------- BENEFICIOS ---------- */
+.beneficios {
+  background: #fff;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.beneficios-grid {
+  display: flex;
+  gap: 30px;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.beneficio {
+  background: #f4f4f4;
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 250px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.beneficio:hover {
+  transform: translateY(-8px);
+}
+
+footer a {
+  color: #D4AF37;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer a:hover {
+  color: #c49c2f;
+  text-decoration: underline;
+}
